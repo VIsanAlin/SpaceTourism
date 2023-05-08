@@ -1,0 +1,83 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* CSS */
+
+@font-face {
+  font-family: Bellefair;
+  src: url(./assets/font/Bellefair-Regular.ttf);
+}
+
+@font-face {
+  font-family: BarlowCondensed;
+  src: url(./assets/font/BarlowCondensed-Regular.ttf);
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url(./assets/font/Barlow-Regular.ttf);
+}
+
+.absolute {
+  left: 200px;
+}
+
+/* Tailwind  */
+
+@layer components {
+  .App {
+    @apply sm:bg-[url('./assets/home/background-home-mobile.jpg')]
+    md:bg-[url('./assets/home/background-home-tablet.jpg')] 
+    lg:bg-[url('./assets/home/background-home-desktop.jpg')] 
+    bg-cover;
+  }
+
+  .Destination {
+    @apply sm:bg-[url('./assets/destination/background-destination-mobile.jpg')]
+    md:bg-[url('./assets/destination/background-destination-tablet.jpg')] 
+    lg:bg-[url('./assets/destination/background-destination-desktop.jpg')] 
+    bg-cover;
+  }
+
+  .Crew {
+    @apply sm:bg-[url('./assets/crew/background-crew-mobile.jpg')]
+    md:bg-[url('./assets/crew/background-crew-tablet.jpg')] 
+    lg:bg-[url('./assets/crew/background-crew-desktop.jpg')] 
+    bg-cover;
+  }
+
+  .Technology {
+    @apply sm:bg-[url('./assets/technology/background-technology-mobile.jpg')]
+    md:bg-[url('./assets/technology/background-technology-tablet.jpg')] 
+    lg:bg-[url('./assets/technology/background-technology-desktop.jpg')] 
+    bg-cover;
+  }
+
+  .Topbar {
+    @apply flex flex-auto items-center justify-between relative;
+  }
+
+  .Navbar {
+    @apply backdrop-blur-lg
+    my-8 py-8 px-52 space-x-8;
+  }
+
+  .spaceexplore {
+    @apply flex flex-row space-x-96;
+  }
+
+  .spacetext {
+    @apply text-white 
+    w-1/2 mt-36 p-48;
+  }
+  .explorecircle {
+    @apply flex items-center justify-center 
+    mt-96 p-36 w-36 h-36 rounded-full bg-white
+    hover:border-8 hover:border-slate-400;
+  }
+
+  .active {
+    @apply border-b-2;
+  }
+}
