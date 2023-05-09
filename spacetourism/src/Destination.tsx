@@ -30,8 +30,8 @@ const Destination: React.FC = () => {
 trip away to help regain perspective and come back refreshed. While
 you're there, take in some history by visiting the Luna 2 an Apollo
 11 landign sites.`,
-      avgdist: "384.400km",
-      traveltime: "3Days",
+      avgdist: "384.400 km",
+      traveltime: "3 Days",
     },
     mars: {
       title: "Mars",
@@ -71,14 +71,14 @@ you're there, take in some history by visiting the Luna 2 an Apollo
       <div>
         <Topbar />
       </div>
-      <h1 className="flex gap-4 pl-52 py-12 text-[28px] font-[BarlowCondensed] tracking-[4px] text-white uppercase">
+      <div className="flex gap-4 pl-52 py-12 text-[28px] font-[BarlowCondensed] tracking-[4px] text-white uppercase">
         <b className="opacity-75 text-slate-500">01</b>
         <p className="">Pick your Destination</p>
-      </h1>
-      <div className="flex items-center space-x-48 mx-64 ">
+      </div>
+      <div className="flex items-center space-x-48 mx-64 pb-24">
         <img className=" py-12" src={data[activeLink].image} alt="" />
         <div className="pl-12 pr-60">
-          <div className="flex justify-between font-[BarlowCondensed] text-[16px] tracking-[2px] uppercase">
+          <div className="flex justify-between font-[BarlowCondensed] text-[16px] tracking-[2px] uppercase ">
             <a
               onClick={() => handleLinkClick("moon")}
               className={

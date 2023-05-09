@@ -68,24 +68,24 @@ const Crew: React.FC = () => {
         <Topbar />
       </div>
       <div className="text-white">
-        <p className="flex gap-4 text-[BarlowCondensed] text-[28px] tracking-[4px]">
+        <p className="flex gap-4 pl-52 font-[BarlowCondensed] text-[28px] tracking-[4px] ">
           <b className="opacity-75 text-slate-500">02 </b>Meet your crew
         </p>
-        <div className="flex">
+        <div className="flex space-x-36 pl-52">
           <div className="w-1/2">
-            <p className="text-[Bellefair] text-[32px] opacity-50 ">
+            <p className="font-[Bellefair] text-[32px] opacity-50 mt-24 uppercase">
               {data[activeLink].title}
             </p>
-            <p className="text-[Bellefair] text-[56px]">
+            <p className="font-[Bellefair] text-[56px] uppercase">
               {data[activeLink].name}
             </p>
-            <p className="text-[Barlow] text-secondaryColor">
+            <p className="font-[Barlow] text-[18px] text-secondaryColor w-[450px]">
               {data[activeLink].description}
             </p>
-            <div className="flex justify-around w-1/2">
+            <div className="flex  w-1/2 mt-24">
               <a
                 onClick={() => handleLinkClick("Douglas")}
-                className={`inline-block w-2 h-2 bg-gray-500 rounded-full ${
+                className={`inline-block w-4 h-4 bg-gray-500 rounded-full ${
                   activeLink === "Douglas"
                     ? "bg-white"
                     : "bg-gray-500 hover:border-b-2 hover:border-slate-500"
@@ -93,7 +93,7 @@ const Crew: React.FC = () => {
               ></a>
               <a
                 onClick={() => handleLinkClick("Mark")}
-                className={`inline-block w-2 h-2 bg-gray-500 rounded-full ${
+                className={`inline-block w-4 h-4 bg-gray-500 rounded-full ml-8 ${
                   activeLink === "Mark"
                     ? "bg-white"
                     : "bg-gray-500 hover:border-b-2 hover:border-slate-500"
@@ -101,7 +101,7 @@ const Crew: React.FC = () => {
               ></a>
               <a
                 onClick={() => handleLinkClick("Victor")}
-                className={`inline-block w-2 h-2 bg-gray-500 rounded-full ${
+                className={`inline-block w-4 h-4 bg-gray-500 rounded-full ml-8 ${
                   activeLink === "Victor"
                     ? "bg-white"
                     : "bg-gray-500 hover:border-b-2 hover:border-slate-500"
@@ -109,7 +109,7 @@ const Crew: React.FC = () => {
               ></a>
               <a
                 onClick={() => handleLinkClick("Anousheh")}
-                className={`inline-block w-2 h-2 bg-gray-500 rounded-full ${
+                className={`inline-block w-4 h-4 bg-gray-500 rounded-full ml-8 ${
                   activeLink === "Anousheh"
                     ? "bg-white"
                     : "bg-gray-500 hover:border-b-2 hover:border-slate-500"
