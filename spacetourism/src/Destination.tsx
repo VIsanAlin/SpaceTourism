@@ -55,7 +55,7 @@ you're there, take in some history by visiting the Luna 2 an Apollo
       title: "Titan",
       image: titan,
       description: `The only moon known to have a dense atmosphere other than Earth.
-      Titan is a home away from home(just a few hundred degrees colder!). As a bonus,
+      Titan is a home away from home (just a few hundred degrees colder!). As a bonus,
       you get striking views of the Rings of Saturn.`,
       avgdist: "1.6 BIL. KM",
       traveltime: "7 YEARS",
@@ -71,60 +71,77 @@ you're there, take in some history by visiting the Luna 2 an Apollo
       <div>
         <Topbar />
       </div>
-      <h1 className="pl-52 py-12 text-2xl font-[BarlowCondensed] text-white uppercase">
-        01 Pick your Destination
+      <h1 className="flex gap-4 pl-52 py-12 text-[28px] font-[BarlowCondensed] tracking-[4px] text-white uppercase">
+        <b className="opacity-75 text-slate-500">01</b>
+        <p className="">Pick your Destination</p>
       </h1>
-      <div className="flex items-center justify-evenly w-3/4">
+      <div className="flex items-center space-x-48 mx-64 ">
         <img className=" py-12" src={data[activeLink].image} alt="" />
-        <div>
-          <div className="flex justify-around w-1/2 p-6 font-[BarlowCondensed] text-white uppercase">
+        <div className="pl-12 pr-60">
+          <div className="flex justify-between font-[BarlowCondensed] text-[16px] tracking-[2px] uppercase">
             <a
               onClick={() => handleLinkClick("moon")}
-              className={activeLink === "moon" ? "active" : ""}
+              className={
+                activeLink === "moon"
+                  ? "active text-white"
+                  : "text-secondaryColor hover:border-b-2 hover:border-slate-500"
+              }
             >
               Moon
             </a>
             <a
               onClick={() => handleLinkClick("mars")}
-              className={activeLink === "mars" ? "active" : ""}
+              className={
+                activeLink === "mars"
+                  ? "active text-white"
+                  : "text-secondaryColor hover:border-b-2 hover:border-slate-500"
+              }
             >
               Mars
             </a>
             <a
               onClick={() => handleLinkClick("europa")}
-              className={activeLink === "europa" ? "active" : ""}
+              className={
+                activeLink === "europa"
+                  ? "active text-white"
+                  : "text-secondaryColor hover:border-b-2 hover:border-slate-500"
+              }
             >
               Europa
             </a>
             <a
               onClick={() => handleLinkClick("titan")}
-              className={activeLink === "titan" ? "active" : ""}
+              className={
+                activeLink === "titan"
+                  ? "active text-white"
+                  : "text-secondaryColor hover:border-b-2 hover:border-slate-500"
+              }
             >
               Titan
             </a>
           </div>
-          <h1 className=" text-6xl p-6 font-[BarlowCondensed] text-white uppercase">
+          <h1 className="  font-[Bellefair] text-[100px] text-white uppercase">
             {data[activeLink].title}
           </h1>
-          <p className=" p-6 font-[BarlowCondensed] text-white uppercase">
+          <p className="  font-[Barlow] text-[18px] text-secondaryColor pb-12">
             {" "}
             {data[activeLink].description}{" "}
           </p>
-          <hr />
-          <div className="flex justify-evenly p-6">
+          <hr className="bg-[#383B4B]" />
+          <div className="flex justify-between pt-12">
             <div>
-              <h2 className=" font-[BarlowCondensed] text-white uppercase">
+              <h2 className=" font-[BarlowCondensed] text-secondaryColor tracking-[2px] uppercase">
                 Avg. Distance
               </h2>
-              <p className=" font-[BarlowCondensed] text-white uppercase">
+              <p className=" font-[Bellefair] text-[28px] text-white uppercase">
                 {data[activeLink].avgdist}
               </p>
             </div>
             <div>
-              <h2 className=" font-[BarlowCondensed] text-white uppercase">
+              <h2 className=" font-[BarlowCondensed] text-secondaryColor tracking-[2px] uppercase">
                 Est. Travel Time
               </h2>
-              <p className=" font-[BarlowCondensed] text-white uppercase">
+              <p className=" font-[Bellefair] text-[28px] text-white uppercase">
                 {data[activeLink].traveltime}
               </p>
             </div>

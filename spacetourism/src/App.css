@@ -60,7 +60,7 @@
 
   .Navbar {
     @apply backdrop-blur-lg
-    my-8 py-8 px-52 space-x-8;
+    my-8 py-8 px-52 space-x-16;
   }
 
   .spaceexplore {
@@ -69,7 +69,7 @@
 
   .spacetext {
     @apply text-white 
-    w-1/2 mt-36 p-48;
+    w-1/2 mt-36 p-60;
   }
   .explorecircle {
     @apply flex items-center justify-center 

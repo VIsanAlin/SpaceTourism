@@ -11,7 +11,7 @@ import victor from "./assets/crew/image-victor-glover.png";
 import Topbar from "./components/Topbar";
 
 const Crew: React.FC = () => {
-  const [activeLink, setActiveLink] = useState("Anousheh");
+  const [activeLink, setActiveLink] = useState("Douglas");
 
   type CrewData = {
     [key: string]: {
@@ -63,40 +63,56 @@ const Crew: React.FC = () => {
   };
 
   return (
-    <div className="Crew">
+    <div className="Crew ">
       <div>
         <Topbar />
       </div>
       <div className="text-white">
-        <h1>02 Meet your crew</h1>
+        <p className="flex gap-4 text-[BarlowCondensed] text-[28px] tracking-[4px]">
+          <b className="opacity-75 text-slate-500">02 </b>Meet your crew
+        </p>
         <div className="flex">
           <div className="w-1/2">
-            <h2>{data[activeLink].title}</h2>
-            <h1>{data[activeLink].name}</h1>
-            <p>{data[activeLink].description}</p>
+            <p className="text-[Bellefair] text-[32px] opacity-50 ">
+              {data[activeLink].title}
+            </p>
+            <p className="text-[Bellefair] text-[56px]">
+              {data[activeLink].name}
+            </p>
+            <p className="text-[Barlow] text-secondaryColor">
+              {data[activeLink].description}
+            </p>
             <div className="flex justify-around w-1/2">
               <a
                 onClick={() => handleLinkClick("Douglas")}
                 className={`inline-block w-2 h-2 bg-gray-500 rounded-full ${
-                  activeLink === "Douglas" ? "bg-white" : "bg-gray-500"
+                  activeLink === "Douglas"
+                    ? "bg-white"
+                    : "bg-gray-500 hover:border-b-2 hover:border-slate-500"
                 }`}
               ></a>
               <a
                 onClick={() => handleLinkClick("Mark")}
                 className={`inline-block w-2 h-2 bg-gray-500 rounded-full ${
-                  activeLink === "Mark" ? "bg-white" : "bg-gray-500"
+                  activeLink === "Mark"
+                    ? "bg-white"
+                    : "bg-gray-500 hover:border-b-2 hover:border-slate-500"
                 }`}
               ></a>
               <a
                 onClick={() => handleLinkClick("Victor")}
                 className={`inline-block w-2 h-2 bg-gray-500 rounded-full ${
-                  activeLink === "Victor" ? "bg-white" : "bg-gray-500"
+                  activeLink === "Victor"
+                    ? "bg-white"
+                    : "bg-gray-500 hover:border-b-2 hover:border-slate-500"
                 }`}
               ></a>
               <a
                 onClick={() => handleLinkClick("Anousheh")}
                 className={`inline-block w-2 h-2 bg-gray-500 rounded-full ${
-                  activeLink === "Anousheh" ? "bg-white" : "bg-gray-500"
+                  activeLink === "Anousheh"
+                    ? "bg-white"
+                    : "bg-gray-500 hover:border-b-2 hover:border-slate-500"
                 }`}
               ></a>
             </div>

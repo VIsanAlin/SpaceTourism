@@ -11,13 +11,11 @@ const App: React.FC = () => {
         <Topbar />
         <div className="spaceexplore">
           <div className="spacetext">
-            <p className="uppercase text-2xl font-[BarlowCondensed]">
+            <p className="uppercase text-[28px] font-[BarlowCondensed] tracking-[4.75px]  text-secondaryColor">
               So, you want to travel to{" "}
             </p>
-            <p className="uppercase text-9xl pt-4 pb-8 font-[Bellefair]">
-              Space
-            </p>
-            <p className="text-sm text-justify w-2/3 font-[Barlow]">
+            <p className="uppercase text-[150px]  font-[Bellefair]">Space</p>
+            <p className=" text-justify  text-[18px] font-[Barlow] text-secondaryColor">
               Let’s face it; if you want to go to space, you might as well
               genuinely go to outer space and not hover kind of on the edge of
               it. Well sit back, and relax because we’ll give you a truly out of
@@ -25,7 +23,7 @@ const App: React.FC = () => {
             </p>
           </div>
           <div className=" explorecircle">
-            <p className="uppercase text-3xl tracking-widest font-[Bellefair]">
+            <p className="uppercase text-[32px] tracking-[2px] font-[Bellefair]">
               Explore
             </p>
           </div>
