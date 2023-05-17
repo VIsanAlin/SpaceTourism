@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         primaryColor: "#0B0D17",
         secondaryColor: " #D0D6F9",
+        thirdColor: "#FFFFFF",
       },
       backgroundImage: {
         "sm-bg": "url('./src/assets/home/background-home-mobile.jpg')",
@@ -16,7 +17,8 @@ module.exports = {
       },
       screens: {
         sm: "375px",
-        // => @media ( min-width : 375px)
+        md: "768px",
+        lg: "1440px",
       },
     },
   },

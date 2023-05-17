@@ -1,12 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 
 // Components
 import Topbar from "./components/Topbar";
 
 const App: React.FC = () => {
+  const [scaleFactor, setScaleFactor] = useState(1);
+  const [scaleHeight, setScaleHeight] = useState(1);
+
+  useEffect(() => {
+    const calculateScaleFactor = () => {
+      const viewportWidth = window.innerWidth;
+
+      const viewportHeight = window.innerHeight;
+      console.log(viewportWidth, viewportHeight);
+      const scaleFactor = viewportWidth > 1440 ? viewportWidth / 1440 : 1;
+      const scaleHeight = viewportHeight > 900 ? viewportHeight / 906 : 1;
+      setScaleFactor(scaleFactor);
+      setScaleHeight(scaleHeight);
+    };
+    calculateScaleFactor();
+    window.addEventListener("resize", calculateScaleFactor);
+
+    return () => {
+      window.removeEventListener("resize", calculateScaleFactor);
+    };
+  }, []);
+
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        transform: `scale(${scaleFactor}, ${scaleHeight}) `,
+        transformOrigin: "top left",
+      }}
+    >
       <div>
         <Topbar />
         <div className="spaceexplore">
